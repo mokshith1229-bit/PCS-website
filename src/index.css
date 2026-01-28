@@ -43,3 +43,26 @@ button,
 a {
     transition: all 0.3s ease;
 }
+
+/* Ticker Animation - Reverse (Left to Right) */
+@keyframes scroll-reverse {
+    0% {
+        transform: translateX(-33.33%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-scroll-reverse {
+    animation: scroll-reverse 40s linear infinite;
+}
+
+.hover\:pause-animation:hover {
+    animation-play-state: paused;
+}
+
+.mask-image-gradient {
+    mask-image: linear-gradient(to right, transparent, black 20px, black 95%, transparent);
+}

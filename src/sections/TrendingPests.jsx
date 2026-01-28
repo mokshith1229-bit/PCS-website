@@ -28,7 +28,7 @@ const TrendingPests = () => {
         <SectionWrapper id="trending-pests" background="light">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Trending Seasonal Pests In India
+                    Trending Seasonal Pests in Visakhapatnam
                 </h2>
                 <p className="text-gray-700 max-w-3xl mx-auto">
                     Stay ahead of seasonal pest problems. These pests are particularly active during certain times of the year and require specialized control measures.
@@ -52,8 +52,8 @@ const TrendingPests = () => {
                             <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
                                 {pest.description}
                             </p>
-                            <Button variant="primary" size="sm" href={pest.link} className="mt-auto">
-                                Read more
+                            <Button variant="primary" size="sm" href="#contact" className="mt-auto">
+                                Know More
                             </Button>
                         </div>
                     </div>

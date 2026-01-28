@@ -26,10 +26,10 @@ const TrustedSolutions = () => {
         <SectionWrapper id="trusted-solutions" background="white">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Trusted Pest Control Solutions Since 1968
+                    Trusted Pest Control Solutions Since 2010
                 </h2>
                 <p className="text-gray-700 max-w-3xl mx-auto">
-                    Over 5 decades of excellence in pest management. We protect homes and businesses from all types of pests.
+                    Over 15 years of excellence in pest management. We protect homes and businesses from all types of pests.
                 </p>
             </div>
 
@@ -62,7 +62,7 @@ const TrustedSolutions = () => {
             </div>
 
             <div className="text-center">
-                <Button variant="primary" size="lg" href="#services">
+                <Button variant="primary" size="lg" href="#contact">
                     Know All Pest Control Services
                 </Button>
             </div>

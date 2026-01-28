@@ -28,10 +28,10 @@ const CommonPests = () => {
         <SectionWrapper id="common-pests" background="white">
             <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Common Pests In India
+                    Common Pests in Visakhapatnam
                 </h2>
                 <p className="text-gray-700 max-w-3xl mx-auto">
-                    Discover the most common pests in India and how to protect your home. Here are the top three household pests that require professional pest control services.
+                    Discover the most common pests in Visakhapatnam and how to protect your home. Here are the top three household pests that require professional pest control services.
                 </p>
             </div>
 
@@ -52,8 +52,8 @@ const CommonPests = () => {
                             <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
                                 {pest.description}
                             </p>
-                            <Button variant="primary" size="sm" href={pest.link} className="mt-auto">
-                                Read More
+                            <Button variant="primary" size="sm" href="#contact" className="mt-auto">
+                                Know More
                             </Button>
                         </div>
                     </div>

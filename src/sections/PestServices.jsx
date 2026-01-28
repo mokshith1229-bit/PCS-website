@@ -31,7 +31,7 @@ const PestServices = () => {
                     </p>
                 </div>
 
-                <Button variant="primary" size="lg" href="#services">
+                <Button variant="primary" size="lg" href="#about">
                     Know More
                 </Button>
             </div>

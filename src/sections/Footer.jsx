@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Youtube, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Mail } from 'lucide-react';
 
 const Footer = () => {
     const services = [
@@ -8,8 +8,7 @@ const Footer = () => {
         'Rodent Control',
         'Mosquito Control',
         'Bed Bug Control',
-        'Bird Control',
-        'Fly Management',
+        'Anti Larval Treatment',
         'General Pest Control'
     ];
 
@@ -29,25 +28,46 @@ const Footer = () => {
                 <div className="grid md:grid-cols-4 gap-8 mb-8">
                     {/* Company Info */}
                     <div>
-                        <img src="/logo.png" alt="PCS" className="h-12 w-auto mb-4 brightness-0 invert" />
+                        <div className="bg-white p-2 rounded-lg inline-block mb-4">
+                            <img src="/logo.png" alt="PCS" className="h-10 w-auto" />
+                        </div>
                         <p className="text-gray-400 text-sm leading-relaxed mb-4">
                             Professional pest control services in Visakhapatnam, Andhra Pradesh. Protecting homes and businesses for over 15 years.
                         </p>
                         <div className="flex gap-3">
-                            <a href="#facebook" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
-                                <Facebook className="w-5 h-5" />
-                            </a>
-                            <a href="#twitter" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
-                                <Twitter className="w-5 h-5" />
-                            </a>
-                            <a href="#instagram" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <a
+                                href="https://www.instagram.com/pcs_enterprises/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors"
+                            >
                                 <Instagram className="w-5 h-5" />
                             </a>
-                            <a href="#youtube" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
-                                <Youtube className="w-5 h-5" />
+                            <a
+                                href="https://www.facebook.com/vizag.pest/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Facebook"
+                                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors"
+                            >
+                                <Facebook className="w-5 h-5" />
                             </a>
-                            <a href="#linkedin" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
-                                <Linkedin className="w-5 h-5" />
+                            <a
+                                href="https://www.threads.com/@pcs_enterprises"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Threads"
+                                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors"
+                            >
+                                <Twitter className="w-5 h-5" />
+                            </a>
+                            <a
+                                href="mailto:k.pavankumarraju1985@gmail.com"
+                                aria-label="Email"
+                                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors"
+                            >
+                                <Mail className="w-5 h-5" />
                             </a>
                         </div>
                     </div>
@@ -90,7 +110,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <span className="font-semibold text-white">Email:</span><br />
-                                <a href="mailto:info@pcspest.com" className="hover:text-white transition-colors">info@pcspest.com</a>
+                                <a href="mailto:info@pcspest.com" className="hover:text-white transition-colors">k.pavankumarraju1985@gmail.com</a>
                             </li>
                             <li>
                                 <span className="font-semibold text-white">WhatsApp:</span><br />

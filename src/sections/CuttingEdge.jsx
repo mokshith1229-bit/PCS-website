@@ -5,29 +5,29 @@ import Button from '../components/Button';
 const CuttingEdge = () => {
     const services = [
         {
-            image: '/pest-inspection.png',
-            title: 'End-End Service (At ₹25 Only)',
-            description: 'Comprehensive pest management from inspection to treatment and follow-up monitoring.',
+            image: '/cutting-edge-termite-2.png',
+            title: 'Anti-Termite Treatment',
+            description: 'Pre-Construction',
             features: [
-                'Free initial pest inspection',
-                'Customized treatment plans',
-                'Eco-friendly pest control methods',
-                'Post-treatment monitoring',
-                'Guaranteed results with warranty',
-                'Expert certified technicians'
+                'Soil treatment before foundation',
+                'Chemical barrier creation',
+                'Long-term termite prevention',
+                'ISI-approved chemicals',
+                'Cost-effective & durable protection',
+                'Warranty support'
             ]
         },
         {
-            image: '/bird-control.png',
-            title: 'Bird Pro',
-            description: 'Humane and effective bird control solutions to protect your property from bird-related damage.',
+            image: '/cutting-edge-post-construction.jpg',
+            title: 'Post-Construction',
+            description: 'Eliminates existing termites and protects your property with advanced drill & inject treatment.',
             features: [
-                'Bird netting installation',
-                'Anti-roosting spikes',
-                'Humane bird deterrents',
-                'Property damage prevention',
+                'Odorless & safe chemicals',
+                'Drill & inject treatments',
+                'Targeted colony elimination',
+                'Minimal disturbance',
                 'Health hazard elimination',
-                'Long-term bird management'
+                'Warranty available'
             ]
         },
         {
@@ -81,8 +81,8 @@ const CuttingEdge = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <Button variant="outline" size="sm" className="w-full mt-auto">
-                                Learn More
+                            <Button variant="outline" size="sm" href="#contact" className="w-full mt-auto">
+                                Book Now
                             </Button>
                         </div>
                     </div>

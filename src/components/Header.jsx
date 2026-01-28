@@ -1,59 +1,77 @@
 import React, { useState } from 'react';
-import { Menu, X, MapPin, Search, Phone, Mail, MessageCircle } from 'lucide-react';
+import { Menu, X, Phone, Mail, MessageCircle } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const navLinks = [
-        { name: 'Services', href: '#services' },
+        { name: 'Services', href: '#cutting-edge' },
         { name: 'About PCS', href: '#about' },
-        { name: 'Contact us', href: '#contact' },
-        { name: 'Blog', href: '#blog' },
+        { name: 'Contact PCS', href: '#contact' },
+        { name: 'PCS Gallery', href: '/pcs-gallery', isRoute: true },
     ];
+
+    const handleNavClick = (e, link) => {
+        setIsMobileMenuOpen(false);
+
+        if (link.isRoute) {
+            // Let Link component handle routing
+            return;
+        }
+
+        e.preventDefault();
+
+        if (location.pathname !== '/') {
+            // If not on home page, navigate to home then scroll
+            navigate('/');
+            setTimeout(() => {
+                const element = document.querySelector(link.href);
+                element?.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        } else {
+            // If already on home page, just scroll
+            const element = document.querySelector(link.href);
+            element?.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-            {/* Top Utility Bar */}
-            <div className="bg-gray-100 border-b border-gray-200">
-                <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
-                    <div className="flex items-center justify-between py-2 text-xs md:text-sm">
-                        <div className="flex items-center gap-2 md:gap-4">
-                            <a href="#locations" className="flex items-center gap-1 text-gray-700 hover:text-primary-600 transition-colors">
-                                <MapPin className="w-3 h-3 md:w-4 md:h-4" />
-                                <span>Locations</span>
-                            </a>
-                            <a href="#search" className="flex items-center gap-1 text-gray-700 hover:text-primary-600 transition-colors">
-                                <Search className="w-3 h-3 md:w-4 md:h-4" />
-                                <span>Search</span>
-                            </a>
-                        </div>
-                        <div className="flex items-center gap-2 md:gap-4">
-                            <a href="#contact" className="text-gray-700 hover:text-primary-600 transition-colors">Contact</a>
-                            <a href="#login" className="text-gray-700 hover:text-primary-600 transition-colors">Login</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             {/* Main Navigation */}
             <div className="bg-white">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
                     <div className="flex items-center justify-between py-1">
                         {/* Logo */}
-                        <div className="flex items-center">
+                        <Link to="/" className="flex items-center">
                             <img src="/logo.png" alt="PCS Pest Control Services" className="h-16 w-auto" />
-                        </div>
+                        </Link>
 
                         {/* Desktop Navigation */}
                         <nav className="hidden md:flex items-center gap-8">
                             {navLinks.map((link) => (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
-                                >
-                                    {link.name}
-                                </a>
+                                link.isRoute ? (
+                                    <Link
+                                        key={link.name}
+                                        to={link.href}
+                                        className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                                    >
+                                        {link.name}
+                                    </Link>
+                                ) : (
+                                    <a
+                                        key={link.name}
+                                        href={link.href}
+                                        onClick={(e) => handleNavClick(e, link)}
+                                        className="text-gray-700 hover:text-primary-600 font-medium transition-colors cursor-pointer"
+                                    >
+                                        {link.name}
+                                    </a>
+                                )
                             ))}
                         </nav>
 
@@ -105,14 +123,25 @@ const Header = () => {
                 <div className="md:hidden bg-white border-t border-gray-200">
                     <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
                         {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                                {link.name}
-                            </a>
+                            link.isRoute ? (
+                                <Link
+                                    key={link.name}
+                                    to={link.href}
+                                    className="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    {link.name}
+                                </Link>
+                            ) : (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={(e) => handleNavClick(e, link)}
+                                    className="text-gray-700 hover:text-primary-600 font-medium transition-colors py-2 cursor-pointer"
+                                >
+                                    {link.name}
+                                </a>
+                            )
                         ))}
                     </nav>
                 </div>

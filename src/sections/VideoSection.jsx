@@ -4,7 +4,7 @@ import { Play } from 'lucide-react';
 
 const VideoSection = () => {
     const [isPlaying, setIsPlaying] = React.useState(false);
-    const videoId = "M7lc1UVf-VE"; // Placeholder YouTube Video ID - Replace with actual ID
+    const videoId = "EO4XaAzlOW4"; // Updated YouTube Video ID
 
     return (
         <SectionWrapper id="video" background="white">

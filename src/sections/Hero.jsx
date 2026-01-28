@@ -24,7 +24,7 @@ const Hero = () => {
                         Your Trusted Pest Control Experts – PCS
                     </h1>
                     <p className="text-lg md:text-xl mb-8 text-gray-200 leading-relaxed">
-                        PCS offers effective, reliable, and innovative pest control services for homes and businesses across Visakhapatnam and Andhra Pradesh.
+                        PCS offers effective, reliable, and innovative pest control services for homes and businesses in Visakhapatnam, Andhra Pradesh.
                     </p>
 
                     {/* CTAs */}

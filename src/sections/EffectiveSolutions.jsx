@@ -5,28 +5,56 @@ import Button from '../components/Button';
 const EffectiveSolutions = () => {
     const solutions = [
         {
-            image: '/home-pest.png',
-            title: 'Home Pest Control',
-            description: 'Protect your family and home from unwanted pests with our comprehensive residential pest control services. Safe, effective, and guaranteed.',
-            link: '#home-pest'
+            image: '/effective-bedbug-treatment.jpg',
+            title: 'Bed Bug Treatment',
+            features: [
+                'Detailed infestation inspection',
+                'Heat + chemical treatment combo',
+                'Mattress & furniture coverage',
+                'Egg and nymph elimination',
+                'Safe for families & pets',
+                'Follow-up visits included'
+            ],
+            link: '#contact'
         },
         {
-            image: '/commercial-pest.png',
-            title: 'Commercial Pest Control',
-            description: 'Keep your business pest-free and compliant with health regulations. Customized solutions for offices, restaurants, and retail spaces.',
-            link: '#commercial-pest'
+            image: '/effective-cockroach-treatment.png',
+            title: 'Cockroach Control Treatment',
+            features: [
+                'Gel + spray based control',
+                'Kitchen & drain targeting',
+                'Hidden nest elimination',
+                'Long-lasting protection',
+                'Food-safe chemicals',
+                'Odorless treatment'
+            ],
+            link: '#contact'
         },
         {
-            image: '/pest-inspection.png',
-            title: 'Industry (Such AS) at Cockroach Service',
-            description: 'Specialized industrial pest management for warehouses, factories, and manufacturing facilities. Comprehensive cockroach elimination programs.',
-            link: '#industry-pest'
+            image: '/effective-mosquito-fogging.jpg',
+            title: 'Mosquito Fogging',
+            features: [
+                'Outdoor & indoor fogging',
+                'Instant mosquito reduction',
+                'Ideal for societies & events',
+                'Covers gardens & open areas',
+                'Reduces dengue & malaria risk',
+                'Quick-dry solution'
+            ],
+            link: '#contact'
         },
         {
-            image: '/termite-pest.png',
-            title: 'Termite (Baiting System)',
-            description: 'Advanced termite baiting systems that eliminate entire colonies. Long-term protection with eco-friendly solutions and warranties.',
-            link: '#termite-baiting'
+            image: '/effective-anti-larval.jpg',
+            title: 'Anti-Larval Treatment',
+            features: [
+                'Water tank & stagnant water treatment',
+                'Stops mosquito breeding',
+                'Eco-friendly chemicals',
+                'Safe for drinking water tanks',
+                'Long-term control',
+                'Preventive solution'
+            ],
+            link: '#contact'
         }
     ];
 
@@ -56,9 +84,14 @@ const EffectiveSolutions = () => {
                             <h3 className="text-lg font-bold text-gray-900 mb-3">
                                 {solution.title}
                             </h3>
-                            <p className="text-gray-700 text-sm mb-4 leading-relaxed flex-grow">
-                                {solution.description}
-                            </p>
+                            <ul className="space-y-1.5 mb-6 flex-grow">
+                                {solution.features.map((feature, idx) => (
+                                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+                                        <span className="text-primary-600 font-bold mt-0.5">•</span>
+                                        <span>{feature}</span>
+                                    </li>
+                                ))}
+                            </ul>
                             <Button variant="primary" size="sm" href={solution.link} className="w-full mt-auto">
                                 Book Now
                             </Button>

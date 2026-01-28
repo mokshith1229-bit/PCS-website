@@ -13,9 +13,16 @@ const LocalBranches = () => {
                     </h3>
                     <p className="text-gray-700 mb-6 leading-relaxed">
                         Find your nearest PCS branch for personalized pest control services.
-                        We have locations across India to serve you better.
+                        We serve you in Visakhapatnam, Andhra Pradesh.
                     </p>
-                    <Button variant="primary" size="lg" href="#locations" className="w-full">
+                    <Button
+                        variant="primary"
+                        size="lg"
+                        href="https://www.google.com/maps/search/Pest+Control+Services+branch+Visakhapatnam"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full"
+                    >
                         Find your local branch
                     </Button>
                 </div>
@@ -27,7 +34,7 @@ const LocalBranches = () => {
                     </h3>
                     <p className="text-gray-200 mb-6 leading-relaxed">
                         Discover our journey of over 15 years in providing exceptional pest control
-                        services across India. Learn about our commitment to excellence and innovation.
+                        services in Visakhapatnam, Andhra Pradesh. Learn about our commitment to excellence and innovation.
                     </p>
                     <Button variant="white" size="lg" href="#about" className="w-full">
                         Find out more
