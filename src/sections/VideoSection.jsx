@@ -25,14 +25,16 @@ const VideoSection = () => {
                                 </div>
                             </>
                         ) : (
-                            <iframe
-                                className="w-full h-full"
-                                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                            <video
+                                className="w-full h-full object-contain bg-black"
+                                src="/videos/pcs-video.mp4"
                                 title="PCS Pest Control Video"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
+                                controls
+                                autoPlay
+                                playsInline
+                            >
+                                Your browser does not support the video tag.
+                            </video>
                         )}
 
                         {/* Overlay Text for Desktop Only - Only visible when NOT playing or if you want it always visible on desktop? usually hidden when playing */}
