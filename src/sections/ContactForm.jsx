@@ -19,8 +19,22 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission
-        console.log('Form submitted:', formData);
+
+        // Format the message for WhatsApp
+        const messageText = `*New Inquiry from Website*
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Message: ${formData.message}`;
+
+        // PCS WhatsApp number
+        const phoneNumber = '919885786396';
+
+        // Create WhatsApp URL
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(messageText)}`;
+
+        // Open in new tab
+        window.open(whatsappUrl, '_blank');
     };
 
     return (
