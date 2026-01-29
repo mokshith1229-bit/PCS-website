@@ -10,7 +10,7 @@ const BookService = () => {
                 <div className="order-2 md:order-1">
                     <div className="rounded-xl overflow-hidden shadow-xl">
                         <img
-                            src="/book-service.png"
+                            src="/ChatGPT Image Jan 29, 2026, 11_35_44 AM.png"
                             alt="Book Your Service Today"
                             className="w-full h-full object-cover"
                         />
